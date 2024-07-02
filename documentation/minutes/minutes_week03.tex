@@ -1,0 +1,100 @@
+\documentclass{cce2014-meetings}
+\svnInfo $Id: minutes_week03.tex 7640 2024-02-21 08:19:14Z jbri2 $
+
+% Meeting details
+\title{Meeting Minutes -- Group 4}
+\author{Location: 0 B 6}
+\date{28 February 2024, 16:30--17:00}
+
+\begin{document}
+
+\maketitle
+
+\section*{Present}
+% Members present at the meeting
+Alessandro Parrella,
+Gabriel Vella,
+Jonas Rousseau-Morvan,
+Keith Farrugia
+
+\section*{Discussion}
+
+\begin{enumerate}
+
+      % There should be an item corresponding to each of the agenda items for this
+      % meeting.
+
+      \item Minutes from the previous meeting were read and approved.
+
+      \item No matters arose from previous meetings
+
+      \item Progress report from group members
+            \begin{enumerate}
+                  \item Jonas reported that the buffer size could be calculated from the
+                        smallest period of the wave, as well as taking into account the
+                        sampling frequency, which can either be calculated from the expected
+                        wave's frequency or the suggested frequency in the lab code. $x$ is
+                        the sampling frequency and $f$ is the lowest frequency of the DTMF
+                        specification. Then our buffer size is $\frac{x}{f}$ because $[x]$ is
+                        in bits per second and $[f]$ is in periods per second. The $[]$
+                        notation is used to denote the variable's dimension.
+                  \item Keith reported that the microcontroller itself has analog pins,
+                        which allow for analog to digital conversion. A circuit is needed
+                        to translate from line input to ADC, but this can be taken from the
+                        handbook. Port 23 is the ADC port used in the lab. There may also be
+                        other ports accessible for the same purpose.
+                  \item Alessandro reported that the implementation of the Fourier Transform
+                        must handle raw arrays and complex numbers manually, without the use
+                        of any external libraries, thus meaning that they must be coded from
+                        scratch. The implementation must be basic and resource-efficient. Not
+                        many sources returned the amplitude apart from the frequencies.
+                  \item Gabriel reported that the board has a connector named J11 to connect
+                        with the character LCD. The board is set up to work in a 4-bit mode.
+                        The pins for the master in slave out, spi clock, reset, register
+                        select, slaved select and backlight control.
+            \end{enumerate}
+
+      \item Targets set for the week
+            \begin{enumerate}
+                  \item Share the research we have done with the group and see how it links together.
+                  \item Start working on the design brief.
+            \end{enumerate}
+            
+      \item No other items were discussed
+\end{enumerate}
+
+\section*{Actions}
+
+\begin{enumerate}
+
+      \item Write the ADC sampling subsection of the Design Brief and begin
+            research on the threading \& interrupts
+            \begin{flushright}
+                  Assigned to: \textbf{Keith Farrugia} \\
+                  Deadline: \textbf{next meeting}
+            \end{flushright}
+
+      \item Write the ADC Buffer Size subsection of the Design Brief and begin
+            research on the threading \& interrupts
+            \begin{flushright}
+                  Assigned to: \textbf{Jonas Rousseau-Morvan} \\
+                  Deadline: \textbf{next meeting}
+            \end{flushright}
+
+      \item Write the Fourier transform subsection of the Design Brief
+            \begin{flushright}
+                  Assigned to: \textbf{Alessandro Parrella} \\
+                  Deadline: \textbf{next meeting}
+            \end{flushright}
+
+      \item Write the LCD Display subsection of the Design Brief
+            \begin{flushright}
+                  Assigned to: \textbf{Gabriel Vella} \\
+                  Deadline: \textbf{next meeting}
+            \end{flushright}
+
+            % Add more actions as necessary
+
+\end{enumerate}
+
+\end{document}
